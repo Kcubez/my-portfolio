@@ -1,0 +1,82 @@
+/* ============================================
+   CUSTOM INTERACTIVE CURSOR
+   ============================================ */
+.custom-cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.1s ease,
+    opacity 0.3s ease,
+    width 0.3s ease,
+    height 0.3s ease;
+  opacity: 0;
+}
+
+.custom-cursor-glow {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  filter: blur(8px);
+  transition:
+    transform 0.15s ease-out,
+    opacity 0.3s ease,
+    width 0.3s ease,
+    height 0.3s ease,
+    background 0.3s ease;
+  opacity: 0;
+}
+
+/* Visibility */
+.custom-cursor-dot.visible,
+.custom-cursor-glow.visible {
+  opacity: 1;
+}
+
+/* Hover States */
+.custom-cursor-dot.hover {
+  width: 12px;
+  height: 12px;
+  background: var(--color-accent-secondary);
+}
+
+.custom-cursor-glow.hover {
+  width: 80px;
+  height: 80px;
+  background: rgba(168, 85, 247, 0.4);
+  filter: blur(15px);
+}
+
+/* Hide default cursor on desktop */
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button,
+  .project-card,
+  .nav-link {
+    cursor: none !important;
+  }
+}
+
+/* Ensure mobile/touch devices use default cursor */
+@media (max-width: 1024px) {
+  .custom-cursor-dot,
+  .custom-cursor-glow {
+    display: none;
+  }
+  body,
+  a,
+  button {
+    cursor: auto !important;
+  }
+}

@@ -1,0 +1,18 @@
+/* ============================================
+   APP LAYOUT STYLES
+   ============================================ */
+.app {
+  position: relative;
+  min-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.app.loaded {
+  opacity: 1;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}

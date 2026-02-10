@@ -1,0 +1,107 @@
+/* ============================================
+   TECH MARQUEE - Infinite Scrolling Icons
+   ============================================ */
+.tech-marquee-section {
+  padding: var(--space-2xl) 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(99, 102, 241, 0.03) 50%,
+    transparent 100%
+  );
+  overflow: hidden;
+  position: relative;
+}
+
+.tech-marquee-section::before,
+.tech-marquee-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tech-marquee-section::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg-primary), transparent);
+}
+
+.tech-marquee-section::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg-primary), transparent);
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  gap: var(--space-3xl);
+  animation: marquee 30s linear infinite;
+  width: fit-content;
+}
+
+.tech-item {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+  filter: grayscale(100%);
+}
+
+.tech-item:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+.tech-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tech-item img.invert {
+  filter: invert(1);
+}
+
+.tech-item:hover img.invert {
+  filter: invert(1);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .tech-item {
+    width: 40px;
+    height: 40px;
+  }
+
+  .marquee-track {
+    gap: var(--space-2xl);
+  }
+}
