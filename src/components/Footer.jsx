@@ -36,7 +36,7 @@ function Footer() {
           </svg>
         </a>
         <a
-          href="https://web.facebook.com/kaungkhant.kyaw.547727"
+          href="https://facebook.com/kaungkhant.kyaw.547727"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
