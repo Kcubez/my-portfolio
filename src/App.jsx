@@ -8,7 +8,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import GlowBackground from './components/GlowBackground';
-import CustomCursor from './components/CustomCursor';
 import './App.css';
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
 
   return (
     <div className={`app ${isLoaded ? 'loaded' : ''}`}>
-      <CustomCursor />
       <GlowBackground />
       <Navigation />
       <main>
