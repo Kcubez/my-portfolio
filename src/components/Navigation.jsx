@@ -6,27 +6,43 @@ function Navigation() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
+    // 1. Handle background glass effect on scroll (throttled)
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-
-      // Update active section based on scroll position
-      const sections = ['contact', 'projects', 'about', 'home'];
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 150) {
-            setActiveSection(section);
-            break;
-          }
-        }
+      const scrolled = window.scrollY > 50;
+      if (isScrolled !== scrolled) {
+        setIsScrolled(scrolled);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    // 2. Efficiently track active section using IntersectionObserver
+    const observerOptions = {
+      root: null,
+      rootMargin: '-40% 0px -40% 0px', // Center-focused observing
+      threshold: 0,
+    };
 
+    const observerCallback = entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const sections = ['home', 'about', 'projects', 'contact'];
+
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
+  }, [isScrolled]);
   const scrollToSection = sectionId => {
     const element = document.getElementById(sectionId);
     if (element) {

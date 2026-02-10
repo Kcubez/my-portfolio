@@ -19,6 +19,9 @@
   filter: blur(100px);
   opacity: 0.5;
   animation: float 20s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .glow-orb-1 {

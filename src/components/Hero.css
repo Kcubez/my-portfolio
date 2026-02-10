@@ -244,6 +244,14 @@
     font-size: 1rem;
   }
 
+  .name-line {
+    font-size: clamp(1.8rem, 7vw, 3rem);
+  }
+
+  .title-line {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+  }
+
   .hero-stats {
     gap: var(--space-lg);
   }
