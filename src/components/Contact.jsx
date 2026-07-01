@@ -61,7 +61,7 @@ function Contact() {
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                 </div>
-                <span>Bangkok, Thailand 🇹🇭</span>
+                <span>Yangon, Myanmar 🇲🇲</span>
               </div>
             </div>
           </div>

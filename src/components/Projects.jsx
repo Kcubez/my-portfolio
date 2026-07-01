@@ -4,26 +4,56 @@ import './Projects.css';
 const projects = [
   {
     id: 1,
-    title: 'Crypto Predictor',
+    title: 'OmniBot',
     description:
-      'AI-Powered Bitcoin Price Prediction platform using machine learning and technical analysis to forecast cryptocurrency trends.',
-    image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80',
-    tags: ['Next.js', 'TypeScript', 'Gemini AI', 'PostgreSQL'],
-    liveUrl: 'https://mot-crypto-predictor.vercel.app/',
-    githubUrl: 'https://github.com/Kcubez/crypto-predictor',
+      'Full-stack SaaS platform for embedding custom-trained AI chatbots into any website. Features RAG knowledge base, real-time streaming, multi-bot management dashboard, Telegram and Facebook Messenger integration.',
+    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80',
+    tags: ['Next.js', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Prisma', 'Shadcn/UI', 'Gemini AI', 'RAG'],
+    liveUrl: 'https://github.com/Kcubez/chatbot-widget',
+    githubUrl: 'https://github.com/Kcubez/chatbot-widget',
   },
   {
     id: 2,
+    title: 'Business AI Integration',
+    description:
+      'Full-stack operational intelligence platform. Integrates business databases and Excel data with Google Gemini to analyze performance, calculate metrics, and output Burmese action recommendations.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Better Auth', 'Gemini AI', 'Tailwind CSS'],
+    liveUrl: 'https://github.com/Kcubez/business_ai_integration',
+    githubUrl: 'https://github.com/Kcubez/business_ai_integration',
+  },
+  {
+    id: 3,
+    title: 'SOP Generator',
+    description:
+      'AI-powered workspace for standard operating procedures. Generates detailed corporate SOPs using Gemini 2.5, features real-time inline editing with auto-save, PDF exports, and Myanmar/EN localization.',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80',
+    tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'NextAuth.js', 'Gemini AI', 'Tailwind CSS'],
+    liveUrl: 'https://github.com/Kcubez/sop-generator',
+    githubUrl: 'https://github.com/Kcubez/sop-generator',
+  },
+  {
+    id: 4,
     title: 'Genius Board',
     description:
-      'Sales Data Analysis Dashboard that transforms raw data into actionable insights with interactive visualizations and export capabilities.',
+      'Sales Data Analysis Dashboard that transforms raw CSV data into actionable insights with dynamic filtering, interactive charts, inline CRUD, bilingual (Myanmar/EN) support, and role-based admin panel.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-    tags: ['Next.js', 'TypeScript', 'Recharts', 'TanStack Table'],
+    tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Recharts', 'TanStack Table', 'Shadcn/UI'],
     liveUrl: 'https://genius-board.vercel.app/',
     githubUrl: 'https://github.com/Kcubez/sales-data-analysis-dashboard',
   },
   {
-    id: 3,
+    id: 5,
+    title: 'Crypto Predictor',
+    description:
+      'AI-Powered Bitcoin Price Prediction platform using Google Gemini AI with real-time Binance data, automated daily cron jobs via GitHub Actions, and role-based access control.',
+    image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80',
+    tags: ['Next.js', 'TypeScript', 'Gemini AI', 'PostgreSQL', 'GitHub Actions', 'Prisma'],
+    liveUrl: 'https://mot-crypto-predictor.vercel.app/',
+    githubUrl: 'https://github.com/Kcubez/crypto-predictor',
+  },
+  {
+    id: 6,
     title: 'Foodie POS',
     description:
       'Restaurant Point of Sale System with menu management, order processing, and real-time analytics for food service businesses.',
@@ -31,16 +61,6 @@ const projects = [
     tags: ['Next.js', 'TypeScript', 'Prisma', 'NextAuth.js'],
     liveUrl: 'https://foodie-pos-cloud.vercel.app/',
     githubUrl: 'https://github.com/Kcubez/Foodie-POS',
-  },
-  {
-    id: 4,
-    title: 'MOT Genius AutoWriter',
-    description:
-      'AI Content Generation Platform that creates high-quality written content using advanced language models and customizable templates.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
-    tags: ['Flask', 'Python', 'Gemini AI', 'Redis'],
-    liveUrl: 'https://mot-genius-autowriter.vercel.app/',
-    githubUrl: 'https://github.com/Kcubez/mot-genius-autowriter-staging',
   },
 ];
 

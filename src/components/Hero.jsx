@@ -43,9 +43,11 @@ function Hero() {
         </div>
 
         <p className="hero-description">
-          A First-Class Honours graduate with <strong>3+ years of experience</strong> building
-          scalable, high-performance web applications. Passionate about{' '}
-          <strong>AI-powered applications</strong> and <strong>clean architecture</strong>.
+          A First-Class Honours graduate specializing in{' '}
+          <strong>TypeScript, React & Next.js</strong> with hands-on experience building
+          production-grade <strong>AI-powered applications</strong>. Passionate about writing
+          clean, reviewable code and understanding <strong>why</strong> things work, not just
+          making them work.
         </p>
 
         <div className="hero-cta">

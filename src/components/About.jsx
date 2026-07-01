@@ -93,7 +93,7 @@ function About() {
                     <div className="detail-icon work">💼</div>
                     <div className="detail-text">
                       <strong>Junior AI Specialist</strong>
-                      <span>Thura Thanlwin Co. Ltd. — Bangkok, Thailand</span>
+                      <span>Thura Thanlwin Co. Ltd. — Yangon, Myanmar</span>
                     </div>
                   </div>
                 </div>

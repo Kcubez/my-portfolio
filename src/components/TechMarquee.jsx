@@ -56,6 +56,15 @@ const techStack = [
     name: 'Tailwind',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
   },
+  {
+    name: 'NestJS',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg',
+  },
+  {
+    name: 'Prisma',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg',
+    invert: true,
+  },
 ];
 
 function TechMarquee() {
